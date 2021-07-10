@@ -13,6 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final crossIcon = Icon(Icons.cancel, color: Colors.red);
 
   int index = 0;
+  int score = 0;
 
   List<Widget> icons = [];
 
@@ -78,6 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   if (questions[index].answer == true) {
                     print('Correct answer');
                     icons.add(tickIcon);
+                    score++;
                   } else {
                     print('Incorrect answer');
                     icons.add(crossIcon);
@@ -104,6 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   if (questions[index].answer == false) {
                     print('Correct answer');
                     icons.add(tickIcon);
+                    score++;
                   } else {
                     print('Incorrect Question');
                     icons.add(crossIcon);
